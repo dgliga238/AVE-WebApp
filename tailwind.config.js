@@ -1,20 +1,20 @@
 // tailwind.config.js
 module.exports = {
   content: [
-  './index.html',
-  './src/**/*.{html,js,ts,jsx,tsx,vue}',
-],
+    './index.html',
+    './src/**/*.{html,js,ts,jsx,tsx,vue}',
+  ],
   theme: {
+    container: {
+      center: true,
+      padding: '15px',
+    },
     extend: {
       colors: {
-        accent: "#179957",      // Typo here? Maybe you meant "accent"
-        accentDark: "#184D47",
-      },
-      container: {
-        center: true,
-        padding: "15px",
+        accent: '#179957',
+        accentDark: '#184D47',
       },
     },
   },
   plugins: [],
-}
+};
