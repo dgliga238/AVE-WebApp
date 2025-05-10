@@ -6,7 +6,7 @@ import CartCountBadge from "./CartCountBadge";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 bg-white z-10 w-full">
+    <div className="sticky top-0 bg-amber-200 z-10 w-full">
       <div className="container hidden lg:block px-4">
         <div className="flex justify-between items-center p-8 gap-8">
           <h1 className="text-4xl font-medium shrink-0">Logo</h1>
