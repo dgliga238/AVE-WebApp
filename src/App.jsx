@@ -1,21 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import MobNavBar from './components/MobNavBar'
 import Products from './components/Products'
+import Cart from './components/Cart';
+import { CartContextProvider } from './context/cartContext'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showCart, setShowCart] = useState(false)
 
   return (
-    <main>
-      <Navbar />
-      <MobNavBar />
+    <CartContextProvider>
+      <main>
+      <Navbar  setShowCart={setShowCart}/>
+      <MobNavBar setShowCart={setShowCart} />
       <Products />
-    </main>
+      {showCart && <Cart setShowcart={setShowCart} />}
+      </main>
+    </CartContextProvider>
+    
   ) 
       
 }
