@@ -4,7 +4,7 @@ import CartProduct from "./CartProduct";
 import { useCartContext } from "../context/cartContext";
 
 const Cart = ({ setShowcart }) => {
-    const { product } = useCartContext();
+    const { product, total } = useCartContext();
 
     return (
         <div
@@ -29,15 +29,19 @@ const Cart = ({ setShowcart }) => {
                             img={el.img}
                             name={el.name}
                             price={el.price}
+                            quantity={el.quantity}
                         />
                     ))}
+                    <p className="text-right font-semibold text-lg mt-4"> Total: ${total.toFixed(2)}</p>
                 </div>
+               { /*
                 <button className="bg-red-800 text-white text-center w-full rounded-3xl py-2 hover:bg-red-900 mb-4 mt-4">
                     View Cart
                 </button>
                 <button className="bg-red-800 text-white text-center w-full rounded-3xl py-2 hover:bg-red-900">
                     Checkout
                 </button>
+                */}
             </div>
         </div>
     );
