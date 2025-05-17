@@ -6,3 +6,14 @@
         @apply border border-gray-400 rounded-full w-[50px] h-[50px] grid place-items-center text-[22px]
     }
 }
+
+ @custom-variant dark (&:where(.dark, .dark *));
+
+ @layer base {
+    html{
+        @apply transition-colors duration-300;
+    }
+    body{
+        @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    }
+ }

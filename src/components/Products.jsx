@@ -1,4 +1,7 @@
 import ProductCard from './ProductCard'; // Make sure this component exists
+import React, { useEffect, useState } from 'react';
+import { useTheme } from "../context/ThemeContext";
+
 
 const data = [
   {
@@ -25,7 +28,7 @@ const data = [
     name: 'Product4',
     price: 59.95,
   },
-    {
+  {
     id: 5,
     image: '/images/product1.jpg',
     name: 'Product5',
@@ -52,12 +55,17 @@ const data = [
 ];
 
 const Products = () => {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="lg:flex justify-between items-center">
-        <h3 className="font-medium text-2xl">Products</h3>
-      </div>
+  const [theme, setTheme] = useState('light');
 
+  return (
+    <div className="relative container mx-auto px-4 py-16" >
+      
+      <div className="lg:flex justify-between items-center">
+        <h3 className="font-medium text-2xl text-gray-900 dark:text-white">
+          Products
+        </h3>
+      </div>
+      
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 pt-8 gap-5">
         {data.map((el) => (
           <ProductCard
@@ -65,6 +73,7 @@ const Products = () => {
             img={el.image}
             name={el.name}
             price={el.price}
+            theme={theme} // Pass theme to ProductCard if needed
           />
         ))}
       </div>
