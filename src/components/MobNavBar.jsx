@@ -5,7 +5,7 @@ import CartCountBadge from "./CartCountBadge";
 
 const MobNavBar = ({setShowCart}) => {
   return (
-    <div className='sticky top-0 bg-white z-10'>
+    <div className='dark:bg-gray-800 sticky top-0 bg-white z-10'>
         <div className='container p-8 lg:hidden'>
             <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-4'>

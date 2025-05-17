@@ -12,14 +12,14 @@ const Cart = ({ setShowcart }) => {
             onClick={() => setShowcart(false)}
         >
             <div
-                className="max-w-[400px] w-full h-full bg-white absolute right-0 top-0 p-6"
+                className=" dark:bg-red-950 text-gray-900 dark:text-gray-100 max-w-[400px] w-full h-full bg-white absolute right-0 top-0 p-6"
                 onClick={(e) => e.stopPropagation()}
             >
                 <RxCross1
                     className="absolute right-0 top-0 m-6 text-[24px] cursor-pointer"
                     onClick={() => setShowcart(false)}
                 />
-                <h3 className="pt-6 text-lg font-medium text-gray-600 uppercase">
+                <h3 className="pt-6 text-lg font-medium uppercase">
                     Your Cart
                 </h3>
                 <div className="mt-6">

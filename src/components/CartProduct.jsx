@@ -1,4 +1,3 @@
-import React from "react";
 import { RxCross1 } from "react-icons/rx";
 import { useCartContext } from "../context/cartContext";
 
@@ -6,7 +5,7 @@ const CartProduct = ({ img, name, price, quantity }) => {
   const { removeFromCart } = useCartContext();
 
   return (
-    <div className="flex justify-between items-center mb-4">
+    <div className="bg-amber-50 dark:bg-red-950 flex justify-between items-center mb-4">
       <div className="flex items-center gap-4">
         <img className="h-[100px] w-[100px] object-cover" src={img} alt={name} />
         <div>
@@ -22,6 +21,6 @@ const CartProduct = ({ img, name, price, quantity }) => {
         title="Remove one item"
       />
     </div>
-  );
-
-export default CartProduct;
+  )
+}
+export default CartProduct
