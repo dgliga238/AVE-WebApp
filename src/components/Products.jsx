@@ -1,7 +1,5 @@
 import ProductCard from './ProductCard'; // Make sure this component exists
-import React, { useEffect, useState } from 'react';
-import { useTheme } from "../context/ThemeContext";
-
+import React, { useState } from 'react';
 
 const data = [
   {
@@ -55,7 +53,7 @@ const data = [
 ];
 
 const Products = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme] = useState('light');
 
   return (
     <div className="relative container mx-auto px-4 py-16" >
