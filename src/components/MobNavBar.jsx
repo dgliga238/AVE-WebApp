@@ -1,4 +1,4 @@
-import { IoMenuSharp, IoSearch } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
 import { FaRegUser, FaShoppingCart } from "react-icons/fa";
 import { CiLight, CiDark } from "react-icons/ci"; 
 import CartCountBadge from "./CartCountBadge";
@@ -14,10 +14,13 @@ const MobNavBar = ({setShowCart}) => {
         <div className='container p-8 lg:hidden'>
             <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-4'>
-                    <IoMenuSharp size={30}/>
                     <IoSearch size={24}/>
                 </div>
-                <h1 className="text-4xl">Logo</h1>
+                <h1 className="text-4xl"><img
+              src="/images/logo.jpg"
+              alt="logo"
+              className="w-25 h-auto object-contain"
+            /></h1>
                 <div className="flex gap-4 text-[30px]">
                     <FaRegUser />
                     <div className="relative cursor-pointer" onClick={() => setShowCart(true)}>

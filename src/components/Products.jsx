@@ -56,7 +56,7 @@ const Products = () => {
   const [theme] = useState('light');
 
   return (
-    <div className="relative container mx-auto px-4 py-16" >
+    <div className="relative container mx-auto px-20 py-16" >
       
       <div className="lg:flex justify-between items-center">
         <h3 className="font-medium text-2xl text-gray-900 dark:text-white">
